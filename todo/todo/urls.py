@@ -21,8 +21,8 @@ from todolist.views import *
 
 router = DefaultRouter()
 router.register('users', UserModelViewSet)
-router.register('projects', ProjectModelViewSet)
-router.register('todolist', ToDoModelViewSet)
+router.register('projects', ProjectLimitOffsetPaginatorViewSet)
+router.register('todolist', TodoCustomDjangoFilterViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
